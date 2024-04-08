@@ -12,10 +12,10 @@ public class StringsDbTestApp {
         Thread.sleep(5000);
 
         DatabaseConnector databaseConnector = DatabaseConnector.getInstance();
-        StringsDatabase1 stringHolderList = new StringsDatabase1();
-        StringsDatabase2 stringHolderSet = new StringsDatabase2();
-        databaseConnector.addDatabase(stringHolderList);
-        databaseConnector.addDatabase(stringHolderSet);
+        StringsDatabase1 stringsDatabase1 = new StringsDatabase1();
+        StringsDatabase2 stringsDatabase2 = new StringsDatabase2();
+        databaseConnector.addDatabase(stringsDatabase1);
+        databaseConnector.addDatabase(stringsDatabase2);
         for (int i = 0; i < 10_000_000; i++) {
             if (i % 10_000 == 0) {
                 System.out.println("records total:" + i);
